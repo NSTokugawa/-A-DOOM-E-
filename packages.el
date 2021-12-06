@@ -53,3 +53,4 @@
 (package! emmet-mode)
 (package! evil-multiedit)
 (package! impatient-mode)
+(package! devdocs-browser)
