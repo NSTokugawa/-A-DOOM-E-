@@ -53,7 +53,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;;sets opacity to 100%, in case transparency is being pulled from window manager. Can make transparent by changing numbers if desired.
+(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;;sets opacity to 100%, in case transparency is being pulled from window manager
+                                                         ;;can make transparent by changing numbers if desired
 
 (setq doom-font (font-spec :family "Source Code Pro" :size 15)) ;;sets font
 
@@ -64,4 +65,4 @@
 
 (map! :leader
       :desc "impatient mode"
-      "t p" #'impatient-mode) ;;adds custom shortcut (spc t p) to activate impatient mode
+      "t p" #'impatient-mode) ;;adds custom shortcut (spc t p) to toggle impatient mode
