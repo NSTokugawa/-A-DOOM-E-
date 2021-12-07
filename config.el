@@ -53,10 +53,18 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(set-frame-parameter (selected-frame) 'alpha '(100 100))
+(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;;sets opacity to 100%, in case transparency is being pulled from window manager
 
-(setq doom-font (font-spec :family "Source Code Pro" :size 15))
+(setq doom-font (font-spec :family "Source Code Pro" :size 15)) ;;sets font
 
-(setq projectile-project-search-path '("~/Documents/"))
+(setq projectile-project-search-path '("~/Documents/")) ;;will search Documents folder for projects to add to projectile
 
-(setq display-line-numbers-type 'relative)
+(setq display-line-numbers-type 'relative) ;;sets line numbers to relative, can be toggled with (spc t l)
+
+(custom-set-variables
+ '(org-directory "~/Documents/org")
+ '(org-agenda-files (list org-directory))) ;;sets directory for org mode to ~/Documents/org and tells agenda to pull from any files in there
+
+(map! :leader
+      :desc "impatient mode"
+      "t p" #'impatient-mode) ;;adds custom shortcut (spc t p) to activate impatient mode
