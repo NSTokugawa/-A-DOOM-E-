@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "Rusty Shackleford"
-      user-mail-address "youremail@here.com")
+(setq user-full-name "Thomas C. Abernathy"
+      user-mail-address "thomas@crassflag.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -29,11 +29,11 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/Documents/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -53,17 +53,14 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;;sets opacity to 100%, in case transparency is being pulled from window manager
+(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;;sets opacity to 100%, in case transparency is being pulled from window manager. Can make transparent by changing numbers if desired.
 
 (setq doom-font (font-spec :family "Source Code Pro" :size 15)) ;;sets font
 
 (setq projectile-project-search-path '("~/Documents/")) ;;will search Documents folder for projects to add to projectile
 
-(setq display-line-numbers-type 'relative) ;;sets line numbers to relative, can be toggled with (spc t l)
-
 (custom-set-variables
- '(org-directory "~/Documents/org")
- '(org-agenda-files (list org-directory))) ;;sets directory for org mode to ~/Documents/org and tells agenda to pull from any files in there
+ '(org-agenda-files (list org-directory))) ;;tells agenda to pull from any files in org directory
 
 (map! :leader
       :desc "impatient mode"
