@@ -64,3 +64,7 @@
 (map! :leader
       :desc "impatient mode"
       "t p" #'impatient-mode) ;adds custom shortcut (spc t p) to toggle impatient mode
+
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((js . t)))
