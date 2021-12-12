@@ -26,6 +26,10 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-monokai-spectrum)
+(custom-theme-set-faces! 'doom-monokai-spectrum
+  '(line-number :foreground "#ffcb12")
+  '(line-number-current-line :foreground "#fff"))
+
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -60,7 +64,7 @@
 
 (map! :leader
       :desc "comment or uncomment selected"
-      "a c" #'comment-or-uncomment-region) ;adds custom shortcut (spc a c) to comment or uncomment selected text
+      "d d" #'comment-or-uncomment-region) ;adds custom shortcut (spc d d) to comment or uncomment selected text
 
 ;; Org mode stuff
 (custom-set-variables
