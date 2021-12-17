@@ -57,27 +57,29 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Custom shortcuts
+;; Shortcuts
 (map! :leader
       :desc "impatient mode"
-      "t p" #'impatient-mode) ;adds custom shortcut (spc t p) to toggle impatient mode
+      "t p" #'impatient-mode) ;adds shortcut (spc t p) to toggle impatient mode
 
 (map! :leader
       :desc "comment or uncomment selected"
-      "d d" #'comment-or-uncomment-region) ;adds custom shortcut (spc d d) to comment or uncomment selected text
+      "d d" #'comment-or-uncomment-region) ;adds shortcut (spc d d) to comment or uncomment selected text
 
-;; Org mode stuff
+;; Org-Mode
 (custom-set-variables
  '(org-agenda-files (list org-directory))) ;tells agenda to pull from any files in org directory
-
 
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((js . t))) ;allows org mode to execute javascript commands
 
-;; Random scripts
-(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;sets opacity to 100%, in case transparency is being pulled from window manager
-                                                         ;can make transparent by changing numbers if desired
+;; Projectile
 
 (setq projectile-project-search-path '("~/Documents/")) ;will search Documents folder for projects to add to projectile
+
+;; Random scripts
+;;
+(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;sets opacity to 100%, in case transparency is being pulled from window manager
+                                                         ;can make transparent by changing numbers if desired
 
