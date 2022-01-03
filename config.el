@@ -75,11 +75,22 @@
       '((js . t))) ;allows org mode to execute javascript commands
 
 ;; Projectile
-
 (setq projectile-project-search-path '("~/Documents/")) ;will search Documents folder for projects to add to projectile
 
-;; Random scripts
-;;
-(set-frame-parameter (selected-frame) 'alpha '(100 100)) ;sets opacity to 100%, in case transparency is being pulled from window manager
-                                                         ;can make transparent by changing numbers if desired
+;; mu4e
+(setq mu4e-get-mail-commad "mbsync crassflag")
 
+;; Random scripts
+(add-to-list 'default-frame-alist(set-frame-parameter (selected-frame) 'alpha '(100 100))) ;sets opacity to 100%, in case transparency is being pulled from window manager
+                                                         ;can make transparent by changing numbers if desired
+;; Daemon mode
+;; (dfun efs/set-frame-parameter ()
+;;       (message "Setting transparency!")
+;;       (set-frame-parameter (selected-frame) 'alpha '(100 100))
+
+;; (if (daemonp)
+;;     (add-hook 'after-make-frame-functions
+;;               (lambda (frame)
+;;                 (with-selected-frame frame
+;;                   (efs/set-frame-parameter))))
+;;   (efs/set-frame-parameter))
